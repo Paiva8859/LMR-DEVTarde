@@ -1,4 +1,4 @@
-body{
+body {
     background-color: darkgrey;
 }
 
@@ -56,4 +56,31 @@ body{
 
 .dimg {
     height: 300px;
+}
+
+.contato {
+    background-color: whitesmoke;
+}
+
+.ccontato {
+    background-color: grey;
+    text-align: center; 
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ccontato input {
+background-color: whitesmoke;
+}
+
+header {
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position: fixed;
+    z-index: 1;
+    top: 0;
 }
