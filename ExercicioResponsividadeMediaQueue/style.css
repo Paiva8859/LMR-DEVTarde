@@ -1,0 +1,102 @@
+#menu img {
+    height: 55px;
+    margin-left: 30px;
+}
+
+#menu {
+    width: 100%;
+    height: 60%;
+    background-color: red;
+    font-size: 26px;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+
+.fundo1 {
+    text-align: left;
+    color: red;
+    background-image: url(fundo1.jpg);
+    width: 100%;
+    height: 1000px;
+    font-size: 26px;
+}
+
+.fundo1 hr {
+    color: crimson;
+    width: 80%; 
+    margin-left: 8px;
+}
+
+.fundo1 p {
+    margin-left: 8px
+}
+
+.fundo1 h1 {
+    color: white;
+    margin-left: 8px;
+}
+
+body {
+    margin: 0px;
+}
+
+.fundo2 {
+    width: 50%;
+    text-align: left;
+    color: crimson;
+    background-color: darkblue;
+}
+.fundo2 img {
+    width: 30%;
+}
+
+.fundo3 h1 {
+    color: yellow
+}
+
+.fundo3 {
+    float: right;
+    background-color: darkblue;
+    color: white;
+    width: 50%;
+}
+
+.subtitulo {
+    float: right;
+    text-align: right;
+}
+
+.linkMenu {
+    color: aliceblue;
+    font-size: 26px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 998px) {
+    .banner {height: 480px; padding: 0px 20px;}
+    .banner .texto {font-size: 24px;}
+    .banner h1 {font-size: 28px;}
+    .banner p {font-size:  14px; margin-top: 90px;}
+    .banner img {width: 40%; height: 300px; margin-top: 90px;}
+    .banner a {padding: 3px 10px; background-color: rgb(24,24,24); font-size: 12px; color: floralwhite; text-decoration: none;}
+
+}
+
+@media screen and (max-width: 768px) {
+    .banner { padding: 0px 20px 20px; }
+    .banner .texto { width: 100%; text-align: center; margin-top: 20px;}
+    .banner h1 { font-size: 18px; }
+    .banner p { font-size: 12px; margin-top: 20px; }
+    .banner img { width: 100%; height: 300px; margin-top: 20px; float: none;}
+    
+}
