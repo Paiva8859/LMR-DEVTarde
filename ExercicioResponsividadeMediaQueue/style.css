@@ -21,6 +21,24 @@ header {
     top: 0;
 }
 
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menuHamburger {
+    float: right ;
+    display: none;
+}
+
+.logo {
+    float: left;
+}
+
+.menu1 {
+    float: right;
+}
+
 .fundo1 {
     text-align: left;
     color: red;
@@ -97,6 +115,15 @@ display: flex;
 }
 
 @media screen and (max-width: 998px) {
+    
+    .menuHamburger {
+        display: none;
+    }
+
+    .menu1 a {
+        font-size: 23px;
+    }
+
     .banner {
         height: 480px;
         padding: 0px 20px;
@@ -129,9 +156,43 @@ display: flex;
         text-decoration: none;
     }
 
+    .fundo2a img {
+        width: 300px;
+        margin-left: 10px;
+    }
+
+    .fundo2a h1 {
+        margin-left: 10px;
+    }
+
+    .fundo2b h1 {
+        margin-right: 15px;
+    }
+
+    .fundo2b p {
+        margin-right: 15px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
+
+    .menuHamburger {
+        display: inline;
+    }
+    
+    .menu1 {
+        display: none;
+    }
+
+    .fundo1 {
+        width: 790px;
+    }
+
+    .fundo1 h1 {
+        font-size: 35px;
+    }
+
     .banner {
         padding: 0px 20px 20px;
     }
@@ -158,4 +219,32 @@ display: flex;
         float: none;
     }
 
+    .fundo2 {
+        width: 1580px;
+        height: 300px;
+        margin-top: 0px;
+        flex-direction: column;
+    }
+
+    .fundo2a h1 {
+        margin-left: 15px;
+    }
+
+    .fundo2a img {
+        width: 480px;
+    }
+
+    .fundo2b {
+        width: 790px;
+    }
+
+    .fundo2b p {
+        width: 400px;
+        margin-left: 15px;
+    }
+
+    .fundo2b h1 {
+        margin-left: 10px;
+        font-size: 30px;
+    }
 }
