@@ -12,6 +12,7 @@
 
 body {
     background-image: url(fundo1.jpg);
+    background-size: cover;
 }
 
 header {
