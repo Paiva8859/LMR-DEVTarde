@@ -1,7 +1,7 @@
 article{
     height: 70%;
     width: 30%;
-    background-color: aliceblue;
+    background-color: darkblue;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,6 +26,7 @@ form{
     border:solid 0.2px rgb(184, 184, 184);
     border-radius: 1em;
     box-shadow: 5px 5px 30px rgb(104, 104, 104);
+    background-color: aliceblue;
 }
 form h1{
     height: 20%;
@@ -114,3 +115,23 @@ input[type=submit]:hover{
     background-color: rgb(255, 0, 0);
     color: rgb(255, 255, 255);
 }
+
+#logado{
+    display: none;
+    color: white;
+}
+.paginaConta{
+    display: flex;
+    display: none;
+}
+
+.alert {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: yellow;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+  }

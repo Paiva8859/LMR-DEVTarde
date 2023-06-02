@@ -1,4 +1,7 @@
 //-----==Dados==-----//
+//PaginaConta
+const paginaConta = document.querySelector(".paginaConta");
+const aConta = document.getElementById("aConta")
 //Formulário Todo
 const facaLogin = document.querySelector(".facaLogin");
 const log = document.querySelector(".log");
@@ -35,7 +38,7 @@ form.addEventListener("submit", function (e) {
   var senha = document.getElementById("password").value;
   var vcu = verifyCampoUser();
   var vcp = verifyCampoPassword();
-  
+
   if (vcu && vcp) {
     var dadosFormulario = {
       user: usuario,
@@ -43,58 +46,89 @@ form.addEventListener("submit", function (e) {
     };
     formulario.push(dadosFormulario);
     usuarioAtual = dadosFormulario;
-    alert("Você fez login com o usuário: "+ usuario);
+
+    // Seleciona a div de resultado pelo ID
+    var divLogado = document.getElementById("logado");
+
+    // Cria um elemento de parágrafo para exibir os dados
+    var paragrafo = document.createElement("p");
+
+    // Define o conteúdo do parágrafo com os dados do formulário
+    paragrafo.textContent = "Usuário: " + usuario;
+
+    // Adiciona o parágrafo à div de resultado
+    divLogado.appendChild(paragrafo);
+
+    var mensagem = "Você fez login com o usuário: " + usuario;
+
+    // Cria um elemento de div para exibir a mensagem
+    var divAlert = document.createElement("div");
+    divAlert.className = "alert";
+    divAlert.textContent = mensagem;
+
+    // Adiciona a div de mensagem ao corpo do documento
+    document.body.appendChild(divAlert);
+
+    // Define um tempo limite para remover a div de mensagem após 2 segundos
+    setTimeout(function () {
+      divAlert.parentNode.removeChild(divAlert);
+    }, 2000);
+
+    form.style.display = "none";
+    paginaConta.style.display = "block";
+    aConta.style.display = "none";
+    divLogado.style.display="block";
   }
-})
+});
 
 facaLogin.addEventListener("click", abreLogin);
 facaCadastro.addEventListener("click", abreCadastro);
 
 //FUNCOES
-function verifyCampoUser(){
+function verifyCampoUser() {
   var usuario = document.getElementById("user").value;
 
   if (usuario.length <= 2) {
     avisoE.style.display = "block";
     return false;
   }
-  else if(!usuario.includes("@")){
+  else if (!usuario.includes("@")) {
     avisoE.style.display = "block";
     return false;
   }
-  else{
+  else {
     avisoE.style.display = "none";
   }
 
   return true;
 }
-function verifyCampoPassword(){
+function verifyCampoPassword() {
   var senha = document.getElementById("password").value;
 
   if (senha.length <= 5) {
     avisoS.style.display = "block";
     return false;
   }
-  else{
+  else {
     avisoS.style.display = "none";
   }
 
   return true;
 }
 
-function abreLogin(){
-  cad.style.display="none";
-  log.style.display="block";
-  cadBtt.style.display="none";
-  logBtt.style.display="block";
-  avisoE.style.display="none";
-  avisoS.style.display="none";
+function abreLogin() {
+  cad.style.display = "none";
+  log.style.display = "block";
+  cadBtt.style.display = "none";
+  logBtt.style.display = "block";
+  avisoE.style.display = "none";
+  avisoS.style.display = "none";
 }
-function abreCadastro(){
-  cad.style.display="block";
-  log.style.display="none";
-  cadBtt.style.display="block";
-  logBtt.style.display="none";
-  avisoE.style.display="none";
-  avisoS.style.display="none";
+function abreCadastro() {
+  cad.style.display = "block";
+  log.style.display = "none";
+  cadBtt.style.display = "block";
+  logBtt.style.display = "none";
+  avisoE.style.display = "none";
+  avisoS.style.display = "none";
 }
