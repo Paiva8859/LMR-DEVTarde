@@ -10,6 +10,10 @@ const logBtt = document.querySelector(".logBtt");
 const cadBtt = document.querySelector(".cadBtt");
 const form = document.querySelector(".form");
 const facaCadastro = document.querySelector(".facaCadastro");
+const card1 = document.getElementById("card1");
+const card2 = document.getElementById("card2");
+const card3 = document.getElementById("card3");
+const card4 = document.getElementById("card4");
 //Enviar formulário (Submit)
 const logar = document.querySelector(".logar");
 //Aviso de verificação de campos
@@ -77,7 +81,33 @@ form.addEventListener("submit", function (e) {
     form.style.display = "none";
     paginaConta.style.display = "block";
     aConta.style.display = "none";
-    divLogado.style.display="block";
+    divLogado.style.display = "block";
+
+    //gerando insignias
+    var numerosPossiveis = [1, 2, 3, 4];
+    var indiceAleatorio = Math.floor(Math.random() * numerosPossiveis.length);
+    var numeroDeInsignias = numerosPossiveis[indiceAleatorio];
+    var insignias = [];
+    for (var i = 0; i < numeroDeInsignias;) {
+      var genInsignias = Math.floor(Math.random() * numerosPossiveis.length) + 1;
+      if (!insignias.includes(genInsignias)) {
+        insignias.push(genInsignias);
+        i++;
+      }
+    }
+
+    if (insignias.includes(1)) {
+      card1.style.display = "block";
+    }
+    if(insignias.includes(2)) {
+      card2.style.display = "block";
+    }
+    if(insignias.includes(3)) {
+      card3.style.display = "block";
+    }
+    if(insignias.includes(4)) {
+      card4.style.display = "block";
+    }
   }
 });
 

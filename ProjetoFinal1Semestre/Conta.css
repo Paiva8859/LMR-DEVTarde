@@ -1,7 +1,6 @@
 article {
     height: 70%;
     width: 30%;
-    background-color: darkblue;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -190,6 +189,7 @@ input[type=submit]:hover {
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
+    display: none;
 }
 
 .card img {
