@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="HeaderFooter.css">
     <link rel="stylesheet" href="CrieSeuEvento.css">
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -39,7 +41,28 @@
     </header>
 
     <main>
+        <article>
+            <h1>Crie seu Evento</h1>
 
+            <section class="form">
+                <form id="eventoForm">
+                    <label for="assunto">Assunto do Evento:</label>
+                    <input type="text" id="assunto" required>
+    
+                    <label for="local">Local do Evento:</label>
+                    <input type="text" id="local" required>
+    
+                    <label for="imagem">Imagem:</label>
+                    <input type="file" id="imagem" accept="image/*" required>
+    
+                    <input type="submit" value="Criar Anúncio">
+                </form>
+            </section>
+
+            <section>
+                <div id="anuncios"></div>
+            </section>
+        </article>
     </main>
 
     <footer>
@@ -47,4 +70,5 @@
     </footer>
 </body>
 <script src="CrieSeuEvento.js"></script>
+
 </html>

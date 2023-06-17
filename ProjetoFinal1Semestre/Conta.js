@@ -35,7 +35,13 @@ window.usuarioAtual = false;
 
 //-----==Events==-----//
 //form
-form.addEventListener("submit", function (e) {
+facaLogin.addEventListener("click", abreLogin);
+facaCadastro.addEventListener("click", abreCadastro);
+form.addEventListener("submit", logando);
+
+//FUNCOES
+
+function logando(e) {
   e.preventDefault();
 
   var usuario = document.getElementById("user").value;
@@ -55,13 +61,13 @@ form.addEventListener("submit", function (e) {
     var divLogado = document.getElementById("logado");
 
     // Cria um elemento de parágrafo para exibir os dados
-    var paragrafo = document.createElement("p");
+    var p = document.createElement("p");
 
     // Define o conteúdo do parágrafo com os dados do formulário
-    paragrafo.textContent = "Usuário: " + usuario;
+    p.textContent = "Usuário: " + usuario;
 
     // Adiciona o parágrafo à div de resultado
-    divLogado.appendChild(paragrafo);
+    divLogado.appendChild(p);
 
     var mensagem = "Você fez login com o usuário: " + usuario;
 
@@ -83,6 +89,7 @@ form.addEventListener("submit", function (e) {
     aConta.style.display = "none";
     divLogado.style.display = "block";
 
+
     //gerando insignias
     var numerosPossiveis = [1, 2, 3, 4];
     var indiceAleatorio = Math.floor(Math.random() * numerosPossiveis.length);
@@ -99,22 +106,18 @@ form.addEventListener("submit", function (e) {
     if (insignias.includes(1)) {
       card1.style.display = "block";
     }
-    if(insignias.includes(2)) {
+    if (insignias.includes(2)) {
       card2.style.display = "block";
     }
-    if(insignias.includes(3)) {
+    if (insignias.includes(3)) {
       card3.style.display = "block";
     }
-    if(insignias.includes(4)) {
+    if (insignias.includes(4)) {
       card4.style.display = "block";
     }
   }
-});
+}
 
-facaLogin.addEventListener("click", abreLogin);
-facaCadastro.addEventListener("click", abreCadastro);
-
-//FUNCOES
 function verifyCampoUser() {
   var usuario = document.getElementById("user").value;
 

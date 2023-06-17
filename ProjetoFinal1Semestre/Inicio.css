@@ -7,9 +7,51 @@ main {
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Alterado para align-items: flex-start; */
+    align-items: flex-start;
+    color:aliceblue;
 }
 
 .title {
     text-align: center;
+}
+
+#tema{
+    display: none;
+    display: flex;
+    flex-direction: row;
+}
+#tema a{
+    font-weight: bold;
+    color:aliceblue
+}
+#tema span{
+    font-weight: bold;
+    
+}
+
+.eventosCriados{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+}
+
+.card {
+    width: 300px;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+  }
+  
+  .card img {
+    width: 100%; 
+    height: 180px; 
+    border-radius: 4px;
+  }
+
+.inscrito{
+    display: none;
+    color: green;
 }
