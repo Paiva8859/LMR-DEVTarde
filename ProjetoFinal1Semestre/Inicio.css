@@ -55,7 +55,6 @@ main {
 
 .inscrito{
     display: none;
-    color: green;
 }
 
 @media screen and (max-width: 768px) {

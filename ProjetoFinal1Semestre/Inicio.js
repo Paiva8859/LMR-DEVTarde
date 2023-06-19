@@ -15,6 +15,7 @@ function inscrevendo(event) {
 
     botaoClicado.style.display = "none";
     inscrito.style.display = "block";
+    inscrito.style.color="green";
 }
 
 function temaDoMes() {
