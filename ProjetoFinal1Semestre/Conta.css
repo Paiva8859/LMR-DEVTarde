@@ -141,6 +141,21 @@ input[type=submit]:hover {
     border-radius: 5px;
 }
 
+@media screen and (max-width: 768px) {
+    article {
+        height: 90%;
+        width: 70%;
+    }
+
+    form h1{
+        font-size: 28px;
+    }
+
+    input[type=submit] {
+        width: 80%
+    }
+}
+
 /*PÁGINA CONTA*/
 .paginaConta {
     display: flex;
@@ -195,6 +210,40 @@ input[type=submit]:hover {
 .card img {
     height: 70px;
     width: 85px;
+}
+
+@media screen and (max-width: 768px) {
+    .title h1{
+        font-size: 20px;
+        margin-top: 0px;
+    }
+    
+    .card{
+        width: 68px;
+        height: 68px;
+    }
+    .card img{
+        height: 35px;
+        width: 50px;
+    }
+    .insignias{
+        width: 100%;
+    }
+    .card p{
+        font-size: 15;
+    }
+    .card span{
+        font-size: 10px;
+    }
+    .insignias h3{
+        font-size: 10px;
+    }
+    .cards p{
+        font-size: 15px;
+    }
+    .cards{
+        flex-direction: column;
+    }
 }
 
 /*.title{
